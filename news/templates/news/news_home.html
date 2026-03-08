@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}News on the website{% endblock%}
+
+{% block content%}
+    <div class="features">
+        <h1>All news</h1>
+        {% for el in news %}
+            <div class="alert">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.anons }}</p>
+                <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">Read details</a>
+            </div>
+        {% endfor %}
+        <a href="{% url 'home' %}"><button class="but_about">Home page</button></a>
+    </div>
+{% endblock %}

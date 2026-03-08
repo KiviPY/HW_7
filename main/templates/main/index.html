@@ -1,0 +1,11 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock%}
+
+{% block content%}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure quae ratione temporibus. Adipisci doloremque dolorum eius perspiciatis ratione reiciendis? Consequuntur.</p>
+        <a href="{% url 'about' %}"><button class="but_about">On the page about us</button></a>
+    </div>
+{% endblock %}
